@@ -14,7 +14,7 @@ namespace Eihror\codeigniter;
 use Composer\Script\Event;
 
 class Installer {
-    //const DOCROOT = 'public';
+    const DOCROOT = '';
 
     /**
      * Composer post install script
@@ -25,14 +25,14 @@ class Installer {
         // Copy CodeIgniter files
         self::recursiveCopy('vendor/codeigniter/framework/application', 'application');
         //mkdir(static::DOCROOT, 0755);
-        //copy('vendor/codeigniter/framework/index.php', static::DOCROOT . '/index.php');
-        copy('vendor/codeigniter/framework/index.php', '/index.php');
-        //copy('dot.htaccess', static::DOCROOT . '/.htaccess');
-        copy('dot.htaccess', '/.htaccess');
+        copy('vendor/codeigniter/framework/index.php', static::DOCROOT . '/index.php');
+        //copy('vendor/codeigniter/framework/index.php', '/index.php');
+        copy('dot.htaccess', static::DOCROOT . '/.htaccess');
+        //copy('dot.htaccess', '/.htaccess');
 
         // Fix paths in index.php
-        //$file = static::DOCROOT . '/index.php';
-        $file = '/index.php';
+        $file = static::DOCROOT . '/index.php';
+        //$file = '/index.php';
         $contents = file_get_contents($file);
         $contents = str_replace(
                 '$system_path = \'system\';', '$system_path = \'../vendor/codeigniter/framework/system\';', $contents
