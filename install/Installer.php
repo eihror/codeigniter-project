@@ -93,7 +93,7 @@ class Installer {
 
     private static function deleteSelf() {
         unlink(__FILE__);
-        rmdir('src');
+        rmdir('install');
         unlink('composer.json.dist');
         unlink('dot.htaccess');
         unlink('LICENSE.md');
