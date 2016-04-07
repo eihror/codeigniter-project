@@ -3,6 +3,8 @@
     "description": "Start any project with Codeigniter",
     "type": "Development",
     "minimum-stability": "stable",
+    "homepage": "https://github.com/Eihror/codeigniter-project",
+    "license": "MIT",
     "require": {
         "php": ">=5.4",
         "codeigniter/framework": "^3.0",
@@ -19,8 +21,6 @@
             "role": "Developer"
         }
     ],
-    "homepage": "https://github.com/Eihror/codeigniter-project",
-    "license": "MIT",
     "config": {
         "vendor-dir": "vendor"
     },
@@ -31,7 +31,7 @@
     },
     "scripts" : {
         "post-install-cmd": [
-            "Eihror\\codigniter\\Installer::postInstall"
+            "Eihror\\codeigniter\\Installer::postInstall"
         ]
     },
     "extra": {
