@@ -20,9 +20,24 @@
             "role": "Developer"
         }
     ],
+    "homepage": "https://github.com/Eihror/codeigniter-project",
+    "license": "MIT",
     "config": {
         "vendor-dir": "vendor"
     },
-    "scripts": {
+    "autoload": {
+        "psr-4": {
+            "Eihror\\codeigniter\\": "install/"
+        }
+    },
+    "scripts" : {
+        "post-install-cmd": [
+            "Eihror\\codigniter\\Installer::postInstall"
+        ]
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
     }
 }
