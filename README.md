@@ -36,7 +36,7 @@ project_folder/
 ### Install CodeIgniter Project
 
 ```
-$ composer create-project --stability=dev Eihror/codeigniter-project project_folder
+$ composer create-project Eihror/codeigniter-project project_folder
 ```
 
 Above command installs `public/.htaccess` to remove `index.php` in your URL. If you don't need it, please remove it.
