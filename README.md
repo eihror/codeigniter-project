@@ -3,10 +3,10 @@
 [![Latest Stable Version](https://poser.pugx.org/eihror/codeigniter-project/v/stable)](https://packagist.org/packages/eihror/codeigniter-project) [![Total Downloads](https://poser.pugx.org/eihror/codeigniter-project/downloads)](https://packagist.org/packages/eihror/codeigniter-project) [![Latest Unstable Version](https://poser.pugx.org/eihror/codeigniter-project/v/unstable)](https://packagist.org/packages/eihror/codeigniter-project) [![License](https://poser.pugx.org/eihror/codeigniter-project/license)](https://packagist.org/packages/eihror/codeigniter-project)
 
 This package installs the offical [CodeIgniter](https://github.com/bcit-ci/CodeIgniter) (version `3.0.*`) with secure folder structure via Composer. \n
-Composer itens extras: [Slugify()]
+Also, this package is based on [Kenji´s project](https://github.com/kenjis/codeigniter-composer-installer) (v0.4.2), please check his other project too. \n
 
-
-Also, this package is based on [Kenji´s project](https://github.com/kenjis/codeigniter-composer-installer) (v0.4.2), please check his other project too.
+#### Extras Packages
+* [Slugify](https://packagist.org/packages/cocur/slugify) (version `2.0`).
 
 ## Folder Structure
 
