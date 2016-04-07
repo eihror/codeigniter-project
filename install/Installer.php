@@ -85,7 +85,7 @@ class Installer {
         $io->write('$ cd <project_folder>');
         $io->write('$ php bin/install.php');
         $io->write('<info>Above command will show help message.</info>');
-        $io->write('See <https://github.com/Eihror/<codeigniter-project></codeigniter-project> for details');
+        $io->write('See <https://github.com/Eihror/codeigniter-project> for details');
         $io->write('==================================================');
     }
 
