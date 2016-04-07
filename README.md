@@ -3,8 +3,6 @@
 This package installs the offical [CodeIgniter](https://github.com/bcit-ci/CodeIgniter) (version `3.0.*`) with secure folder structure via Composer.
 Also, this package is based on [Kenji´s project](https://github.com/kenjis/codeigniter-composer-installer) (v0.4.2), please check his other project too.
 
-You can update CodeIgniter system folder to latest version with one command.
-
 ## Folder Structure
 
 ```
@@ -53,6 +51,14 @@ $config['index_page'] = 'index.php';
 $config['index_page'] = '';
 ~~~
 
+
+#### Update CodeIgniter
+You can update CodeIgniter system folder to latest version with one command.
+
+```
+$ cd /path/to/project_folder
+$ composer update
+```
 
 #### Install Translation Messages
 
