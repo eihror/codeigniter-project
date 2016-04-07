@@ -96,7 +96,7 @@ class Installer {
         rmdir('install');
         unlink('composer.json.dist');
         unlink('dot.htaccess');
-        unlink('LICENSE.md');
+        //unlink('LICENSE.md');
     }
 
     /**
