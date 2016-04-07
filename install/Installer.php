@@ -35,10 +35,10 @@ class Installer {
         $file = static::DOCROOT . 'index.php';
         $contents = file_get_contents($file);
         $contents = str_replace(
-                '$system_path = \'system\';', '$system_path = \'../vendor/codeigniter/framework/system\';', $contents
+                '$system_path = \'system\';', '$system_path = \'vendor/codeigniter/framework/system\';', $contents
         );
         $contents = str_replace(
-                '$application_folder = \'application\';', '$application_folder = \'../application\';', $contents
+                '$application_folder = \'application\';', '$application_folder = \'application\';', $contents
         );
         file_put_contents($file, $contents);
 
@@ -46,7 +46,7 @@ class Installer {
         $file = 'application/config/config.php';
         $contents = file_get_contents($file);
         $contents = str_replace(
-                '$config[\'composer_autoload\'] = FALSE;', '$config[\'composer_autoload\'] = realpath(APPPATH . \'../vendor/autoload.php\');', $contents
+                '$config[\'composer_autoload\'] = FALSE;', '$config[\'composer_autoload\'] = realpath(APPPATH . \'vendor/autoload.php\');', $contents
         );
 
         // Set 'index_page' blank
