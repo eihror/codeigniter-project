@@ -8,13 +8,12 @@ Also, this package is based on [Kenji´s project](https://github.com/kenjis/code
 ## Folder Structure
 
 ```
-codeigniter/
+project_folder/
 ├── application/
 ├── composer.json
 ├── composer.lock
-├── public/
-│   ├── .htaccess
-│   └── index.php
+├── .htaccess
+├── index.php
 └── vendor/
     └── cocur/
         └── slugify/
