@@ -2,6 +2,7 @@
     "name": "eihror/codeigniter-project",
     "description": "Start any project with Codeigniter",
     "type": "Development",
+    "minimum-stability": "stable",
     "require": {
         "php": ">=5.4",
         "codeigniter/framework": "^3.0",
