@@ -23,12 +23,6 @@ class Installer {
      */
     public static function postInstall(Event $event = null) {
         
-        $io = $event->getIO();
-        
-        $io->write('==================================================');
-        $io->write('Welcome to CodeIgniter Composer Project!');
-        $io->write('<info>Copy `application folder` of CodeIgniter to root.</info>');
-        
         // Copy CodeIgniter files
         self::recursiveCopy('vendor/codeigniter/framework/application', 'application');
         
@@ -36,45 +30,26 @@ class Installer {
         //copy('vendor/codeigniter/framework/index.php', static::DOCROOT . '/index.php');
         //copy('dot.htaccess', static::DOCROOT . '/.htaccess');
         
-        $io->write('<info>Copy `index.php` of CodeIgniter to root.</info>');
-        
         copy('vendor/codeigniter/framework/index.php', static::DOCROOT . 'index.php');
-        
-        $io->write('<info>Copy `.htaccess` of CodeIgniter to root.</info>');
-        
         copy('dot.htaccess', static::DOCROOT . '.htaccess');
         
         // Fix paths in index.php
         //$file = static::DOCROOT . '/index.php';
         $file = static::DOCROOT . 'index.php';
         $contents = file_get_contents($file);
-        
-        $io->write('<info>Update `index.php` to Vendor - CodeIgniter System folder.</info>');
-        
         $contents = str_replace('$system_path = \'system\';', '$system_path = \'vendor/codeigniter/framework/system\';', $contents);
-        
-        $io->write('<info>Update `index.php` to Application folder on root.</info>');
-        
         $contents = str_replace('$application_folder = \'application\';', '$application_folder = \'application\';', $contents);
         file_put_contents($file, $contents);
         
         // Enable Composer Autoloader
         $file = 'application/config/config.php';
         $contents = file_get_contents($file);
-        
-        $io->write('<info>Update `config.php` to read Composer packages on Vendor Folder.</info>');
-        
         $contents = str_replace('$config[\'composer_autoload\'] = FALSE;', '$config[\'composer_autoload\'] = realpath(APPPATH . \'vendor/autoload.php\');', $contents);
 
-        $io->write('<info>Update `config.php` to make index_page blank.</info>');
-                
         // Set 'index_page' blank
         $contents = str_replace('$config[\'index_page\'] = \'index.php\';', '$config[\'index_page\'] = \'\';', $contents);
         file_put_contents($file, $contents);
         
-        
-        $io->write('<info>Installation complete! \o/</info>');
-        $io->write('==================================================');
         // Update composer.json
         copy('composer.json.dist', 'composer.json');
 
@@ -99,9 +74,18 @@ class Installer {
      */
     private static function showMessage(Event $event = null) {
         $io = $event->getIO();
-        $io->write('//////////////////////////////////////////////////');
+        $io->write('==================================================');
+        $io->write('Welcome to CodeIgniter Composer Project!');
+        $io->write('<info>Copy `application folder` of CodeIgniter to root.</info>');
+        $io->write('<info>Copy `index.php` of CodeIgniter to root.</info>');
+        $io->write('<info>Copy `.htaccess` of CodeIgniter to root.</info>');
+        $io->write('<info>Update `index.php` to Vendor - CodeIgniter System folder.</info>');
+        $io->write('<info>Update `index.php` to Application folder on root.</info>');
+        $io->write('<info>Update `config.php` to read Composer packages on Vendor Folder.</info>');
+        $io->write('<info>Update `config.php` to make index_page blank.</info>');
+        $io->write('<info>Installation complete! \o/</info>');
+        $io->write('==================================================');
         $io->write('**************************************************');
-        $io->write('\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\');
         $io->write('==================================================');
         $io->write('<info>`/.htaccess` was installed. If you don\'t need it, please remove it.</info>');
         $io->write('<info>If you want to install translations for system messages:</info>');
