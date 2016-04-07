@@ -24,7 +24,7 @@ class Installer {
     public static function postInstall(Event $event = null) {
         // Copy CodeIgniter files
         self::recursiveCopy('vendor/codeigniter/framework/application', 'application');
-        mkdir(static::DOCROOT, 0755);
+        //mkdir(static::DOCROOT, 0755);
         //copy('vendor/codeigniter/framework/index.php', static::DOCROOT . '/index.php');
         //copy('dot.htaccess', static::DOCROOT . '/.htaccess');
         copy('vendor/codeigniter/framework/index.php', static::DOCROOT . 'index.php');
