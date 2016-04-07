@@ -14,8 +14,7 @@ namespace Eihror\codeigniter;
 use Composer\Script\Event;
 
 class Installer {
-
-    const DOCROOT = 'public';
+    //const DOCROOT = 'public';
 
     /**
      * Composer post install script
@@ -26,8 +25,10 @@ class Installer {
         // Copy CodeIgniter files
         self::recursiveCopy('vendor/codeigniter/framework/application', 'application');
         mkdir(static::DOCROOT, 0755);
-        copy('vendor/codeigniter/framework/index.php', static::DOCROOT . '/index.php');
-        copy('dot.htaccess', static::DOCROOT . '/.htaccess');
+        //copy('vendor/codeigniter/framework/index.php', static::DOCROOT . '/index.php');
+        copy('vendor/codeigniter/framework/index.php', '/index.php');
+        //copy('dot.htaccess', static::DOCROOT . '/.htaccess');
+        copy('dot.htaccess', '/.htaccess');
 
         // Fix paths in index.php
         $file = static::DOCROOT . '/index.php';
@@ -78,16 +79,12 @@ class Installer {
     private static function showMessage(Event $event = null) {
         $io = $event->getIO();
         $io->write('==================================================');
-        $io->write(
-                '<info>`public/.htaccess` was installed. If you don\'t need it, please remove it.</info>'
-        );
-        $io->write(
-                '<info>If you want to install translations for system messages or some third party libraries,</info>'
-        );
-        $io->write('$ cd <codeigniter_project_folder>');
+        $io->write('<info>`/.htaccess` was installed. If you don\'t need it, please remove it.</info>');
+        $io->write('<info>If you want to install translations for system messages:</info>');
+        $io->write('$ cd <project_folder>');
         $io->write('$ php bin/install.php');
         $io->write('<info>Above command will show help message.</info>');
-        $io->write('See <https://github.com/kenjis/codeigniter-composer-installer> for details');
+        $io->write('See <https://github.com/Eihror/<codeigniter-project></codeigniter-project> for details');
         $io->write('==================================================');
     }
 
