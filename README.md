@@ -8,7 +8,29 @@ Also, this package is based on [Kenji´s project](https://github.com/kenjis/code
 #### Extras Packages
 * [Slugify](https://packagist.org/packages/cocur/slugify) (version `2.0`).
 
-## Folder Structure
+## Requirements
+
+* PHP 5.4 or later
+* `composer` command (See [Composer Installation](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx))
+* Git
+
+## How to Use
+
+### Install CodeIgniter Project
+
+```
+$ composer create-project Eihror/codeigniter-project project_folder
+```
+
+### Run Scripts to create a Codeigniter Basic Structure
+
+```
+$ cd /path/to/project_folder
+$ composer run-script post-install-cmd
+```
+
+
+## Folder Final Structure
 
 ```
 project_folder/
@@ -25,21 +47,8 @@ project_folder/
             └── system/
 ```
 
-## Requirements
 
-* PHP 5.4 or later
-* `composer` command (See [Composer Installation](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx))
-* Git
-
-## How to Use
-
-### Install CodeIgniter Project
-
-```
-$ composer create-project Eihror/codeigniter-project project_folder
-```
-
-Above command installs `public/.htaccess` to remove `index.php` in your URL. If you don't need it, please remove it.
+Above command installs `.htaccess` to remove `index.php` in your URL. If you don't need it, please remove it.
 
 And it changes `application/config/config.php`:
 
