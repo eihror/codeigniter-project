@@ -10,7 +10,7 @@ Also, this package is based on [Kenji´s project](https://github.com/kenjis/code
 
 ## Requirements
 
-* PHP 5.4 or later
+* PHP 5.5.9 or later
 * `composer` command (See [Composer Installation](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx))
 * Git
 
