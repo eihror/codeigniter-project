@@ -3,7 +3,7 @@
     "description": "Start any project with Codeigniter",
     "type": "Development",
     "minimum-stability": "dev",
-    "version": "v0.0.2",
+    "version": "v0.0.1",
     "homepage": "https://github.com/Eihror/codeigniter-project",
     "license": "MIT",
     "require": {
