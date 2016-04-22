@@ -2,7 +2,7 @@
     "name": "eihror/codeigniter-project",
     "description": "Start any project with Codeigniter",
     "type": "Development",
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "version": "v0.0.2",
     "homepage": "https://github.com/Eihror/codeigniter-project",
     "license": "MIT",
