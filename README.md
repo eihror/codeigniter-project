@@ -22,7 +22,7 @@ Also, this package is based on [Kenji´s project](https://github.com/kenjis/code
 $ composer create-project Eihror/codeigniter-project project_folder
 ```
 
-### Run Scripts to create a Codeigniter Basic Structure
+### Run Scripts to create a Codeigniter Basic Structure ( Only if system don´t run this automatically )
 
 ```
 $ cd /path/to/project_folder
