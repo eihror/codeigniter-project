@@ -86,6 +86,7 @@ class Installer {
         $io->write('<info>Copy `.htaccess` of CodeIgniter to root.</info>');
         $io->write('<info>Update `index.php` to Vendor - CodeIgniter System folder.</info>');
         $io->write('<info>Update `index.php` to Application folder on root.</info>');
+        $io->write('<info>Update `config.php` to use a better base_url.</info>');
         $io->write('<info>Update `config.php` to read Composer packages on Vendor Folder.</info>');
         $io->write('<info>Update `config.php` to make index_page blank.</info>');
         $io->write('<info>Installation complete! \o/</info>');
