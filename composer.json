@@ -25,15 +25,15 @@
     "config": {
         "vendor-dir": "vendor"
     },
-    "scripts" : {
-        "post-create-project-cmd": [
-            "Eihror\\codeigniter\\Installer::postInstall"
-        ]
-    },
     "autoload": {
         "psr-4": {
             "Eihror\\codeigniter\\": "install/"
         }
+    },
+    "scripts" : {
+        "post-create-project-cmd": [
+            "Eihror\\codeigniter\\Installer::postInstall"
+        ]
     },
     "extra": {
         "branch-alias": {
