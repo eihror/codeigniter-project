@@ -44,7 +44,7 @@ class Installer {
         // Enable Composer Autoloader
         $file = 'application/config/config.php';
         $contents = file_get_contents($file);
-        $contents = str_replace('$config[\'composer_autoload\'] = FALSE;', '$config[\'composer_autoload\'] = realpath(APPPATH . \'vendor/autoload.php\');', $contents);
+        $contents = str_replace('$config[\'composer_autoload\'] = FALSE;', '$config[\'composer_autoload\'] = realpath(APPPATH . \'../vendor/autoload.php\');', $contents);
         
         //Make a better base_url configuration
         $file = 'application/config/config.php';
