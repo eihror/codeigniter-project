@@ -36,17 +36,17 @@ $ composer run-script post-install-cmd
 
 ```
 project_folder/
-|--- application/
-|--- composer.json
-|--- composer.lock
-|--- .htaccess
-|--- index.php
-|--- vendor/
-    |--- cocur/
-        |--- slugify/
-    |--- codeigniter/
-        |--- framework/
-            |--- system/
++--- application/
++--- composer.json
++--- composer.lock
++--- .htaccess
++--- index.php
++--- vendor/
+    +--- cocur/
+        +--- slugify/
+    +--- codeigniter/
+        +--- framework/
+            +--- system/
 ```
 
 
