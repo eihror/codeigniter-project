@@ -4,6 +4,7 @@
 		"php": ">=5.4",
                 "codeigniter/framework": "^3.0",
                 "cocur/slugify": "^2.0"
+                "eihror/compress-image": "^0.0.4" 
 	},
 	"require-dev": {
 		"mikey179/vfsStream": "^1.6"
