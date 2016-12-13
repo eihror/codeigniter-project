@@ -49,7 +49,7 @@ class Installer {
         //Make a better base_url configuration
         $file = 'application/config/config.php';
         $contents = file_get_contents($file);
-        $contents = str_replace('$config[\'base_url\'] = \'\';', '$config[\'base_url\'] = ((isset($_SERVER[\'HTTPS\']) && $_SERVER[\'HTTPS\'] == "on") ?  "https" : "http"); $config[\'base_url\'] .=  "://".$_SERVER[\'HTTP_HOST\']; $config[\'base_url\'] .=  str_replace(basename($_SERVER[\'SCRIPT_NAME\']),"",$_SERVER[\'SCRIPT_NAME\']).\'/\';', $contents);
+        $contents = str_replace('$config[\'base_url\'] = \'\';', '$config[\'base_url\'] = ((isset($_SERVER[\'HTTPS\']) && $_SERVER[\'HTTPS\'] == "on") ?  "https" : "http");'.PHP_EOL.'$config[\'base_url\'] .=  "://".$_SERVER[\'HTTP_HOST\'];'.PHP_EOL.'$config[\'base_url\'] .=  str_replace(basename($_SERVER[\'SCRIPT_NAME\']),"",$_SERVER[\'SCRIPT_NAME\']).\'/\';', $contents);
 
         // Set 'index_page' blank
         $contents = str_replace('$config[\'index_page\'] = \'index.php\';', '$config[\'index_page\'] = \'\';', $contents);
