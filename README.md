@@ -42,6 +42,8 @@ project_folder/
 ├── .htaccess
 ├── index.php
 └── vendor/
+    └── eihror/
+        └── compress-image/
     └── cocur/
         └── slugify/
     └── codeigniter/
