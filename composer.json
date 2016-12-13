@@ -4,7 +4,7 @@
     "type": "Development",
     "minimum-stability": "stable",
     "version": "v0.0.2",
-    "homepage": "https://github.com/Eihror/codeigniter-project",
+    "homepage": "https://github.com/eihror/codeigniter-project",
     "license": "MIT",
     "require": {
         "php": ">=5.5.9",
